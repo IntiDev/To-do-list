@@ -6,7 +6,7 @@ new Vue({
     },
 
     methods:{
-        addItem: () => {
+        addItem() {
             let item = this.txtItem.trim();
             if(item) {
                 this.itemList.push({
@@ -15,7 +15,7 @@ new Vue({
                 });
             }
             this.txtItem = '';
-            console.log("Agregada");
+            console.log(this.itemList);
             
         }
     }
