@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>To do list</title>
+</head>
+<body>
+    <header>
+        <h1> To do list</h1>
+    </header>
+    <main id='tareas'>
+        <input type='text' placeholder='Escribe tu tarea ;)' v-model='item'>
+        <button v-on:click='addItem'> Agregar tarea</button>
+        <ul>
+            <li>
+                <input type='checkbox' name='' id=''>
+                <label> Descripción tarea</label>
+                <button> X </button>
+            </li>
+        </ul>
+    </main>
+    <!-- <script src='https://unpkg.com/vue/dist/vue.js'></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src='main.js'></script>
+</body>
+</html>
