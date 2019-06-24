@@ -1,7 +1,7 @@
 new Vue({
     el: 'main',
     data: {
-        txtItem: 'Lorem ipsum',
+        txtItem: '',
         itemsList: []
     },
 
@@ -15,8 +15,11 @@ new Vue({
                 });
             }
             this.txtItem = '';
-            console.log(this.itemsList);
-            
+            //console.log(this.itemsList);
+        },
+        deleteItem(item) {
+            let index = this.itemsList.indexOf(item);
+            this.itemsList.splice(index,1);
         }
     }
 });

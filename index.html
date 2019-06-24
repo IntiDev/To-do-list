@@ -17,7 +17,7 @@
             <li>
                 <input type='checkbox' name='' id='' v-model='item.checked'>
                 <label> {{item.text}} </label>
-                <button> X </button>
+                <button v-on:click='deleteItem(item)'> X </button>
             </li>
         </ul>
     </main>
