@@ -16,7 +16,7 @@
         <br/>
         <br/>
         <div class='ui fluid right action input'>
-            <input type='text' placeholder='Escribe tu tarea ;)'v-model='txtItem'>
+            <input type='text' placeholder='Escribe tu tarea ;)' autofocus v-on:keyup.enter='addItem' v-model='txtItem'>
             <button class='ui orange right labeled icon button' v-on:click='addItem'> 
                 <i class='add square icon'></i>
                 Agregar tarea
