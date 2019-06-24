@@ -16,7 +16,7 @@
         <br/>
         <br/>
         <div class='ui fluid right action input'>
-            <input type='text' placeholder='Escribe tu tarea ;)' v-model='txtItem'>
+            <input type='text' placeholder='Escribe tu tarea ;)'v-model='txtItem'>
             <button class='ui orange right labeled icon button' v-on:click='addItem'> 
                 <i class='add square icon'></i>
                 Agregar tarea
@@ -24,9 +24,9 @@
         </div>
         <ul v-for=' item in itemsList'>
             <li>
-                <div class='ui clearing blue segment'>
+                <div class='ui clearing blue segment' v-bind:class='{disabled:item.checked}'>
                         <input type='checkbox' name='' id='' v-model='item.checked'>
-                        <label class='ui label blue horizontal'> {{item.text}} </label>
+                        <label class='ui label blue horizontal' v-bind:class='{disabled:item.checked}'> {{item.text}} </label>
                         <button class='mini ui light-grey right floated button' v-on:click='deleteItem(item)'>
                             Borrar
                             <i class='remove icon'></i>
