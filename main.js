@@ -2,20 +2,20 @@ new Vue({
     el: 'main',
     data: {
         txtItem: 'Lorem ipsum',
-        itemList: []
+        itemsList: []
     },
 
     methods:{
         addItem() {
             let item = this.txtItem.trim();
             if(item) {
-                this.itemList.push({
+                this.itemsList.push({
                         text: item,
                         checked: false
                 });
             }
             this.txtItem = '';
-            console.log(this.itemList);
+            console.log(this.itemsList);
             
         }
     }

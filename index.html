@@ -13,10 +13,10 @@
     <main id='tareas'>
         <input type='text' placeholder='Escribe tu tarea ;)' v-model='txtItem'>
         <button v-on:click='addItem'> Agregar tarea</button>
-        <ul>
+        <ul v-for=' item in itemsList'>
             <li>
-                <input type='checkbox' name='' id=''>
-                <label> Descripción tarea</label>
+                <input type='checkbox' name='' id='' v-model='item.checked'>
+                <label> {{item.text}} </label>
                 <button> X </button>
             </li>
         </ul>
