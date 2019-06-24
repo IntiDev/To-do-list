@@ -5,24 +5,37 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>To do list</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.css'>
+    <link rel='stylesheet' href='style.css'>
 </head>
-<body>
+<body class='ui container'>
     <header>
         <h1> To do list</h1>
     </header>
     <main id='tareas'>
-        <input type='text' placeholder='Escribe tu tarea ;)' v-model='txtItem'>
-        <button v-on:click='addItem'> Agregar tarea</button>
+        <br/>
+        <br/>
+        <div class='ui fluid right action input'>
+            <input type='text' placeholder='Escribe tu tarea ;)' v-model='txtItem'>
+            <button class='ui orange right labeled icon button' v-on:click='addItem'> 
+                <i class='add square icon'></i>
+                Agregar tarea
+            </button>
+        </div>
         <ul v-for=' item in itemsList'>
             <li>
-                <input type='checkbox' name='' id='' v-model='item.checked'>
-                <label> {{item.text}} </label>
-                <button v-on:click='deleteItem(item)'> X </button>
+                <div class='ui clearing blue segment'>
+                        <input type='checkbox' name='' id='' v-model='item.checked'>
+                        <label class='ui label blue horizontal'> {{item.text}} </label>
+                        <button class='mini ui light-grey right floated button' v-on:click='deleteItem(item)'>
+                            Borrar
+                            <i class='remove icon'></i>
+                        </button>
+                </div>
             </li>
         </ul>
     </main>
     <script src='https://unpkg.com/vue/dist/vue.js'></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
     <script src='main.js'></script>
 </body>
 </html>
